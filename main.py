@@ -38,19 +38,12 @@ conversation_context = append_text_from_file(conversation_context, './data/CV.tx
 
 
 # Replace with your actual API key
-openai.api_key = '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'
+openai.api_key = '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'
 
 def get_gpt3_response(user_message):
     global conversation_context
     try:
         # If this is the start of the conversation, prepend instructions to the context
-        if not conversation_context:
-            instructions = (
-                "The following is a conversation with an AI assistant. The assistant is helpful, "
-                "creative, clever, and very friendly. It is designed to provide informative and concise responses.\n"
-            )
-            conversation_context = instructions
-
         # Include the user's message in the conversation context
         conversation_context += f"\nHuman: {user_message}\nAI:"
 
@@ -77,7 +70,7 @@ def get_gpt3_response(user_message):
 
 
 # Streamlit app layout
-st.title("Simple Chatbot Interface")
+st.title("Interview Chatbot")
 
 # Radio buttons to switch between chatbots
 chatbot_type = st.radio("Choose the chatbot engine:", ('GPT-3', 'ChatterBot'))
