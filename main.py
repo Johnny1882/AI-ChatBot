@@ -6,12 +6,12 @@ import streamlit as st
 # client = OpenAI(api_key='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')
 
 # Create a new instance of a ChatBot
-bot = ChatBot('CVBot')
-trainer = ChatterBotCorpusTrainer(bot)
-trainer.train("./data/training_data.yml")
+# bot = ChatBot('CVBot')
+# trainer = ChatterBotCorpusTrainer(bot)
+# trainer.train("./data/training_data.yml")
 
 def get_chatbot_response(message):
-    return bot.get_response(message)
+    return "chatterbot is not working at the moment"
 
 
 
